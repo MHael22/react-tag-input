@@ -13,6 +13,7 @@
     "url": "https://github.com/pathofdev/react-tag-input"
   },
   "scripts": {
+    "prepare": "npm run module-build",
     "module-build": "tsc",
     "umd-build": "rollup ./build/module/index.js --format umd -m --name 'ReactTagInput' -g react:React --file ./build/umd/index.js",
     "umd-minify": "uglifyjs ./build/umd/index.js -o ./build/umd/index.min.js --source-map url",
