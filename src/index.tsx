@@ -13,6 +13,7 @@ export interface ReactTagInputProps {
   editable?: boolean;
   readOnly?: boolean;
   removeOnBackspace?: boolean;
+  className?: string;
 }
 
 interface State {
@@ -99,7 +100,7 @@ export default class ReactTagInput extends React.Component<ReactTagInputProps, S
 
     const { input } = this.state;
 
-    const { tags, placeholder, maxTags, editable, readOnly, validator, removeOnBackspace } = this.props;
+    const { tags, placeholder, maxTags, editable, readOnly, validator, removeOnBackspace, className } = this.props;
 
     const maxTagsReached = maxTags !== undefined ? tags.length >= maxTags : false;
 
@@ -108,7 +109,7 @@ export default class ReactTagInput extends React.Component<ReactTagInputProps, S
     const showInput = !readOnly && !maxTagsReached;
 
     return (
-      <div className={classSelectors.wrapper}>
+      <div className={[classSelectors.wrapper, className].join(" ")}>
         {tags.map((tag, i) => (
           <Tag
             key={i}
