@@ -4,6 +4,7 @@ $reactTagInputColor: #e2e2aa !default;
 $reactTagColorText: #333 !default;
 $reactTagHeight: 2.375em !default;
 $reactTagFontSize: 1em !default;
+$reactTagInputColorText: black !default;
 $reactTagBorderRadius: 3px !default;
 $reactTagMarginPadding: 0.1875em !default;
 
@@ -21,7 +22,7 @@ $reactTagMarginPadding: 0.1875em !default;
   flex-wrap: wrap;
   align-items: center;
 
-  font-size: 1rem;
+  font-size: $reactTagFontSize;
   background: white;
   color: $reactTagColorText;
   border: 1px solid $reactTagInputColor;
@@ -43,13 +44,13 @@ $reactTagMarginPadding: 0.1875em !default;
     line-height: 1;
 
     background: transparent;
-    color: $reactTagColorText;
+    color: $reactTagInputColorText;
     border: none;
     border-radius: $reactTagBorderRadius;
     outline: 0;
     box-shadow: none;
     -webkit-appearance: none;
-    caret-color: black;
+    caret-color: $reactTagInputColorText;
 
     &::placeholder, &:-moz-placeholder, &:-ms-input-placeholder, &::-moz-placeholder, &::-webkit-input-placeholder {
       color: $reactTagColorText;
