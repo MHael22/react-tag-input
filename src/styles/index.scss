@@ -53,7 +53,7 @@ $reactTagMarginPadding: 0.1875em !default;
     caret-color: $reactTagInputColorText;
 
     &::placeholder, &:-moz-placeholder, &:-ms-input-placeholder, &::-moz-placeholder, &::-webkit-input-placeholder {
-      color: $reactTagColorText;
+      color: $reactTagInputColorText;
     }
     &:focus {
       border: none;
